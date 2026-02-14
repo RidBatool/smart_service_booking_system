@@ -1,10 +1,4 @@
-/** TAC SERVICE BOOKING APP CREATE ACCOUNT FORM COMPONENT FILE **/
-/*
- * This component represents the account creation form for the TAC Service Booking App.
- * It allows users to enter their personal information and create an account to access the application.
- */
 
-/* Importing the necessary dependencies */
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";

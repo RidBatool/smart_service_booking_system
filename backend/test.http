@@ -1,16 +1,16 @@
-# POST http://localhost:5000/api/login
-# Content-Type: application/json
+POST http://localhost:5000/api/login
+Content-Type: application/json
 
-# {
-#   "email": "admin@service.com",
-#   "password": "StrongPassword123!"
-# }
+{
+  "email": "rizbat@gmail.com",
+  "password": "Rizbat123456$"
+}
 
-GET http://localhost:5000/api/admin/bookings
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg3NzY4ZTk0MmRkNDA2NDcwZGU3NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzA2NTgyNDksImV4cCI6MTc3MDc0NDY0OX0.Fr9mnVRDyW4FkuilNXFIBr-k5w4wtPftmmZ_v-fAJRI
+# GET http://localhost:5000/api/admin/bookings
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg3NzY4ZTk0MmRkNDA2NDcwZGU3NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzA2NTgyNDksImV4cCI6MTc3MDc0NDY0OX0.Fr9mnVRDyW4FkuilNXFIBr-k5w4wtPftmmZ_v-fAJRI
 
-GET http://localhost:5000/api/admin/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg3NzY4ZTk0MmRkNDA2NDcwZGU3NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzA2NTgyNDksImV4cCI6MTc3MDc0NDY0OX0.Fr9mnVRDyW4FkuilNXFIBr-k5w4wtPftmmZ_v-fAJRI
+# GET http://localhost:5000/api/admin/users
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg3NzY4ZTk0MmRkNDA2NDcwZGU3NzciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzA2NTgyNDksImV4cCI6MTc3MDc0NDY0OX0.Fr9mnVRDyW4FkuilNXFIBr-k5w4wtPftmmZ_v-fAJRI
 
 # GET http://localhost:5000/api/admin/users
 # Authorization: Bearer

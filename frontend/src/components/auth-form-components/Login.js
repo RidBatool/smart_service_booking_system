@@ -1,10 +1,4 @@
-/** TAC SERVICE BOOKING APP LOGIN FORM COMPONENT FILE **/
-/*
- * This component represents the login form for the TAC Service Booking App.
- * It allows the user to enter their login credentials to authenticate themselves into the application.
- */
 
-/* Importing the necessary dependencies */
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useLogin } from "../../hooks/useLogin";

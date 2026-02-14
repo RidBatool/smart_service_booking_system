@@ -1,5 +1,3 @@
-/** TAC SERVICE BOOKING APP BOOKINGS SLICE **/
-/* This Redux Toolkit slice manages the state related to bookings in the TAC Service Booking App. */
 
 import { createSlice } from "@reduxjs/toolkit";
 

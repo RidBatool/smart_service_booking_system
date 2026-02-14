@@ -1,4 +1,3 @@
-/* Array containing objects representing each service options offered by Rida Clinic. */
 
 const services = [
   "Vehicle Maintenance: Battery Testing",

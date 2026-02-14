@@ -1,9 +1,4 @@
-/** TAC SERVICE BOOKING APP REACT FOOTER COMPONENT FILE **/
-/*
- * This component represents the footer section, displaying branding information for the TAC Service Booking App.
- */
 
-/* Importing the necessary dependencies */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 

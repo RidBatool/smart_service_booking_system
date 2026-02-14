@@ -1,10 +1,4 @@
-/** TAC SERVICE BOOKING APP DELETE CONFIRMATION MODAL COMPONENT **/
-/* 
 
-This component represents the Delete Confirmation Modal that pops up when a user selects a cancel action on a service booking. 
-on using the service*/
-
-/* Importing the necessary dependencies */
 import { closeDcModal } from "../../redux/deleteConfirmModalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";

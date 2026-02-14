@@ -1,10 +1,4 @@
-/** TAC SERVICE BOOKING APP LOGO/TITLE BRANDING COMPONENT **/
-/*
- * This component represents the landing brand section for the TAC Service Booking App.
- * It also serves as the visual introduction to the app, providing the logo, title, and slogan.
- */
 
-/* Importing the necessary dependencies */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCar } from "@fortawesome/free-solid-svg-icons";
 

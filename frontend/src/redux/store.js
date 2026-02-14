@@ -1,5 +1,3 @@
-/** TAC SERVICE BOOKING APP REDUX TOOLKIT STORE **/
-/* This Redux Toolkit store handles the global state in the TAC Service Booking App. */
 
 import { configureStore } from "@reduxjs/toolkit";
 import bookingsReducer from "./bookingsSlice";

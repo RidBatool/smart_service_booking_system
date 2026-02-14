@@ -1,4 +1,3 @@
-/** TAC SERVICE BOOKING APP – LANDING PAGE */
 
 import LandingBrand from "../components/landing-page-components/LandingBrand";
 import Login from "../components/auth-form-components/Login";
@@ -9,7 +8,7 @@ import { Navigate } from "react-router-dom";
 const LandingPage = () => {
   const { user } = useAuthContext();
 
-  // ✅ If user is already logged in, redirect to dashboard
+ 
   if (user) {
     return <Navigate to="/" />;
   }

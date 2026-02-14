@@ -1,4 +1,3 @@
-/** TAC SERVICE BOOKING APP - MONGOOSE USER SCHEMA MODEL FILE **/
 
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");

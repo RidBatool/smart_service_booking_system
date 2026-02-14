@@ -1,4 +1,3 @@
-/* Array holding the headers for booking information displayed on the dashboard. */
 
 const columnDisplayHeadings = [
   "Work Order No.",

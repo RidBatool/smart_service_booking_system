@@ -1,7 +1,4 @@
-/** TAC SERVICE BOOKING APP HELP MODAL COMPONENT **/
-/* This component represents the Help Modal that provides guidelines on using the service booking app. */
 
-/* Importing the necessary dependencies */
 import { closeHelpModal } from "../../redux/helpModalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import CloseIcon from "@mui/icons-material/Close";

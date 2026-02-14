@@ -1,4 +1,3 @@
-/** TAC SERVICE BOOKING APP - CUSTOM REACT HOOK FOR USER LOGOUT **/
 
 import { useAuthContext } from "./useAuthContext";
 

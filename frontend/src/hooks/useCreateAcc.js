@@ -1,4 +1,3 @@
-/** TAC SERVICE BOOKING APP - CUSTOM REACT HOOK FOR CREATING USER ACCOUNT **/
 
 import { useAuthContext } from "./useAuthContext";
 

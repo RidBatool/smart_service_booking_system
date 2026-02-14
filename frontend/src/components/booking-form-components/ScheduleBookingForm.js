@@ -1,10 +1,4 @@
-/** TAC SERVICE BOOKING APP - SCHEDULE BOOKING FORM COMPONENT **/
-/*
- * This component represents the new service booking form for the TAC Service Booking App.
- * It allows users to schedule a service by providing necessary details.
- */
 
-/* Importing the necessary dependencies */
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";

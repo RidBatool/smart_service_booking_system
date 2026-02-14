@@ -1,4 +1,4 @@
-/** TAC SERVICE BOOKING APP DASHBOARD PAGE **/
+
 
 import Navbar from "../components/navbar-components/Navbar";
 import DashBoard from "../components/dashboard-components/Dashboard";

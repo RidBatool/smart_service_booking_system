@@ -1,4 +1,4 @@
-/** TAC SERVICE BOOKING APP UPDATE BOOKING PAGE **/
+
 
 import Navbar from "../components/navbar-components/Navbar";
 import UpdateBookingForm from "../components/booking-form-components/UpdateBookingForm";

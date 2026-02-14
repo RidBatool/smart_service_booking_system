@@ -1,4 +1,4 @@
-/** TAC Service Booking app is styled using CSS. **/
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "../src/styles/index.css";

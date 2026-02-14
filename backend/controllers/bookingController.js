@@ -1,9 +1,4 @@
-/** TAC SERVICE BOOKING APP BACKEND BOOKING CONTROLLER FILE **/
-/*
-This app is designed using the MVC (Model-View-Controller) pattern. This file contains all the controller functions responsible for executing CRUD operations 
-using Mongoose ODM. In essence, these controller functions perform CRUD operations through the schema model to the database that are referenced in the "routes.js"
-file.
-*/
+
 
 /* Importing the Database Schema Model into the controller file */
 const Booking = require("../models/bookingModel");

@@ -19,12 +19,12 @@ export default function App() {
       <Routes>
         
 
-        {/* ✅ PUBLIC ROUTES */}
+        {/* PUBLIC ROUTES */}
         <Route path="/login" element={<LandingPage />} />
         <Route path="/create-account" element={<CreateAccPage />} />
         <Route path="/admin-login" element={<AdminLoginPage />} />
 
-        {/* ✅ ADMIN PROTECTED ROUTE */}
+        {/*  ADMIN PROTECTED ROUTE */}
         <Route
           path="/admin"
           element={
@@ -34,7 +34,7 @@ export default function App() {
           }
         />
 
-        {/* ✅ USER PROTECTED ROUTES */}
+        {/* USER PROTECTED ROUTES */}
         <Route
           path="/"
           element={user ? <DashboardPage /> : <Navigate to="/login" />}
@@ -48,7 +48,7 @@ export default function App() {
           element={user ? <UpdateBookingPage /> : <Navigate to="/login" />}
         />
 
-        {/* ✅ FALLBACK */}
+        {/* FALLBACK */}
         <Route
           path="*"
           element={<Navigate to={user ? "/" : "/login"} />}

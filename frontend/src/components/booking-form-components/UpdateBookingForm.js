@@ -1,10 +1,4 @@
-/** TAC SERVICE BOOKING APP - UPDATE BOOKING FORM COMPONENT **/
-/*
- * This component represents the form for updating a service booking in the TAC Service Booking App.
- * Users can modify booking details.
- */
 
-/* Importing the necessary dependencies */
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";

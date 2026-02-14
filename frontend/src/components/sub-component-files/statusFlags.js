@@ -1,4 +1,4 @@
-/* Array of all service status flags. */
+
 
 const statusFlags = [
   "SCHEDULED",

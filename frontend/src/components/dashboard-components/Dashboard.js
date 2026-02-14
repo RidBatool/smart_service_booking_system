@@ -1,10 +1,4 @@
-/** TAC SERVICE BOOKING APP - DASHBOARD COMPONENT **/
-/*
- * This component represents the dashboard section of the TAC Service Booking App.
- * It displays all information related to the service bookings, including functionality for searching, completing, cancelling and updating bookings.
- */
 
-/* Importing the necessary dependencies */
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";

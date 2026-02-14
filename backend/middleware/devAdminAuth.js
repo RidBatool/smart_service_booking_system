@@ -1,4 +1,4 @@
-// DEV ONLY – Hardcoded admin auth
+
 const devAdminAuth = (req, res, next) => {
   const authHeader = req.headers.authorization;
 

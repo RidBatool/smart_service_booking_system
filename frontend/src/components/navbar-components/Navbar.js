@@ -1,6 +1,4 @@
-/** TAC SERVICE BOOKING APP NAVBAR FORM COMPONENT FILE **/
 
-/* Importing the necessary dependencies */
 import { Link } from "react-router-dom";
 import { useLogOut } from "../../hooks/useLogOut";
 import { useAuthContext } from "../../hooks/useAuthContext";

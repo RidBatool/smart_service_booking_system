@@ -1,10 +1,4 @@
-/** TAC SERVICE BOOKING APP EXPRESSJS BACKEND BOOKING ROUTES FILE **/
-/*
- * This file contains the Express.js backend routes for the TAC Service Booking App.
- * These routes handle all CRUD operation requests to corresponding controller functions defined in "bookingController.js".
- */
 
-/*Importing the necessary modules and controller functions to the backend routes file.*/
 const router = require("express").Router();
 const {
   getBookings,
