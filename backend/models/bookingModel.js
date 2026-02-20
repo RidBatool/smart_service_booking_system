@@ -3,6 +3,21 @@ const mongoose = require("mongoose");
 
 const bookingSchema = new mongoose.Schema(
   {
+    customerId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+    serviceId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Service",
+    },
+    providerId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+    date: {
+      type: String,
+    },
     customerFirstName: {
       type: String,
       required: true,

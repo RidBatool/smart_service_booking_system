@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLogOut } from "../hooks/useLogOut";
 
 import axios from "axios";

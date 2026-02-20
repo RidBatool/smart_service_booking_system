@@ -1,8 +1,9 @@
-# Booking Service
+# Smart Service Booking & Management System (SSBMS)
 
-Full-stack booking management application with:
-- A React frontend for customer and admin workflows
-- An Express/MongoDB backend with JWT-based authentication
+Full-stack MERN booking platform with:
+- Customer booking workflow
+- Service Provider (agent) service management
+- Admin monitoring and provider approval workflow
 
 ## Tech Stack
 - Frontend: React 18, React Router, Redux Toolkit, Axios, Bootstrap, MUI
@@ -12,8 +13,19 @@ Full-stack booking management application with:
 ## Project Structure
 ```text
 booking_service/
-  backend/    # Express API + MongoDB models
-  frontend/   # React app
+  backend/
+    controllers/
+    models/
+    routes/
+    middleware/
+    utils/
+  frontend/
+    src/
+      components/
+      pages/
+      redux/
+      hooks/
+      services/
 ```
 
 ## Prerequisites
@@ -70,7 +82,9 @@ npm start
 
 ## Authentication and Roles
 - JWT auth is required for booking endpoints.
-- Users can have roles: `customer`, `agent`, `admin`.
+- Users can have roles: `customer`, `agent` (provider), `admin`.
+- Provider (`agent`) accounts require admin approval (`isApproved`) before access.
+- Public signup can create only `customer` or `agent` accounts.
 - Admin-only endpoints are under `/api/admin/*`.
 
 ## API Overview
@@ -87,9 +101,26 @@ Base backend URL: `http://localhost:5000`
 - `PATCH /api/bookings/update-booking/:id` - Update booking
 - `DELETE /api/bookings/remove-booking/:id` - Delete booking
 
+### Service Routes (protected)
+- `GET /api/services` - List all services
+- `GET /api/services/my-services` - List current provider/admin services
+- `GET /api/services/:id` - Get one service
+- `POST /api/services` - Create service (provider/admin)
+- `PATCH /api/services/:id` - Update owned service (provider/admin)
+- `DELETE /api/services/:id` - Delete owned service (provider/admin)
+
 ### Admin Routes (protected + admin role)
 - `GET /api/admin/users` - List all users (password excluded)
 - `GET /api/admin/bookings` - List all bookings
+- `GET /api/admin/providers/pending` - List providers awaiting approval
+- `PATCH /api/admin/providers/:id/approve` - Approve provider account
+- `PATCH /api/admin/providers/:id/reject` - Mark provider as not approved
+
+## Frontend Routes
+- `/` - Customer dashboard
+- `/provider` - Provider dashboard (approved providers)
+- `/admin` - Admin dashboard
+- `/login`, `/create-account`, `/admin-login` - Public auth pages
 
 ## Testing
 Backend:

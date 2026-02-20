@@ -9,6 +9,7 @@ const bp = require("body-parser");
 const routes = require("./routes/routes");
 const userLoginRoutes = require("./routes/user");
 const adminRoutes = require("./routes/adminRoutes");
+const serviceRoutes = require("./routes/serviceRoutes");
 
 app.use(bp.json());
 app.use(bp.urlencoded({ extended: true }));
@@ -17,6 +18,7 @@ app.use(morgan("dev"));
 app.use(helmet());
 
 app.use("/api/bookings", routes);
+app.use("/api/services", serviceRoutes);
 app.use("/api", userLoginRoutes);
 app.use("/api/admin", adminRoutes);
 

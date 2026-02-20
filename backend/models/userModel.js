@@ -9,7 +9,8 @@ const userSchema = new mongoose.Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  role: { type: String, enum: ["customer", "agent", "admin"], default: "customer" } // consistent roles
+  role: { type: String, enum: ["customer", "agent", "admin"], default: "customer" },
+  isApproved: { type: Boolean, default: true },
 });
 
 // ------------------------
@@ -24,6 +25,10 @@ userSchema.statics.createAcc = async function (firstName, lastName, email, passw
   if (!validator.isStrongPassword(password)) {
     throw Error("Password not strong enough");
   }
+
+  const allowedSignupRoles = ["customer", "agent"];
+  const safeRole = allowedSignupRoles.includes(role) ? role : "customer";
+  const isApproved = safeRole === "agent" ? false : true;
 
   // Check if email exists
   const exists = await this.findOne({ email });
@@ -41,7 +46,8 @@ userSchema.statics.createAcc = async function (firstName, lastName, email, passw
     lastName,
     email,
     password: hash,
-    role
+    role: safeRole,
+    isApproved,
   });
 
   return user;
@@ -58,6 +64,10 @@ userSchema.statics.login = async function (email, password) {
   const user = await this.findOne({ email });
   if (!user) {
     throw Error("Invalid email address and/or password");
+  }
+
+  if (user.role === "agent" && !user.isApproved) {
+    throw Error("Provider account pending admin approval");
   }
 
   const match = await bcrypt.compare(password, user.password);

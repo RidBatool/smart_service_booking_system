@@ -170,6 +170,18 @@ const CreateAcc = () => {
               )}
             </div>
 
+            {/* Auth Create Account Role Selection */}
+            <div className="input-form-container">
+              <select
+                className="auth-form-input"
+                {...register("role")}
+                defaultValue="customer"
+              >
+                <option value="customer">Customer Account</option>
+                <option value="agent">Service Provider Account</option>
+              </select>
+            </div>
+
             {/* Auth Create Account Form Input - Password */}
             <div
               className={`input-form-container show-pass-icon ${

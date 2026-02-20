@@ -10,11 +10,20 @@ const createToken = (_id, role) => {
 // POST /api/create-acc
 const userCreateAcc = async (req, res) => {
   const { firstName, lastName, email, password, role } = req.body;
+  const safeRole = role === "agent" ? "agent" : "customer";
 
   try {
-    const user = await User.createAcc(firstName, lastName, email, password, role);
+    const user = await User.createAcc(firstName, lastName, email, password, safeRole);
     const token = createToken(user._id, user.role);
-    res.status(201).json({ _id: user._id, firstName: user.firstName, lastName: user.lastName, email: user.email, role: user.role, token });
+    res.status(201).json({
+      _id: user._id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      role: user.role,
+      isApproved: user.isApproved,
+      token,
+    });
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
@@ -27,7 +36,15 @@ const userLogin = async (req, res) => {
   try {
     const user = await User.login(email, password);
     const token = createToken(user._id, user.role);
-    res.status(200).json({ _id: user._id, firstName: user.firstName, lastName: user.lastName, email: user.email, role: user.role, token });
+    res.status(200).json({
+      _id: user._id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      role: user.role,
+      isApproved: user.isApproved,
+      token,
+    });
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
